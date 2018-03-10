@@ -1,0 +1,178 @@
+\documentclass[letterpaper,11pt]{article}
+%\usepackage{latexsym}
+\usepackage{titlesec}
+%\usepackage{marvosym}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+%\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1.05in}
+%\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{2in}
+\addtolength{\topmargin}{-1.2in}
+\addtolength{\textheight}{2.3in}
+%\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-7pt}\scshape\raggedright\large}{}{0em}{}[\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\name}{Waverly Roeger}
+\newcommand{\addrtop}{875 Estates Street \#C}
+\newcommand{\addrbot}{Livermore, CA 94550}
+\newcommand{\phone}{(806) 239-6854}
+\newcommand{\email}{\href{mailto:waverlyroeger@gmail.com}{waverlyroeger@gmail.com}}
+\newcommand{\linkedin}{\href{https://www.linkedin.com/in/wroeger}{linkedin.com/in/wroeger}}
+\newcommand{\github}{\href{https://github.com/WeiverlyPlace}{github.com/WeiverlyPlace}}
+
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		#1
+		\vspace{-0.5pt}
+	}
+}
+
+\newcommand{\resumeItemWithBoldTitle}[2]{
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
+}
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{\tiny$\blacksquare$}
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{description}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{description}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-0.93\textwidth-\leftmargin\relax]}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%%  RESUME  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+	%----HEADING----------------------------
+	\begin{center}\textbf{\textsc{\LARGE \name}}\end{center}
+	\vspace{-0.3in}
+	\begin{small}
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\phone & \linkedin \\
+		\email & \github \\
+	\end{tabular*}
+	\end{small}
+	\vspace{-0.1in}
+	
+
+	%----EDUCATION--------------------------
+	%----PROGRAMMING SKILLS-----------------
+	\section{Education and Skills}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Bachelor of Science in Computer Science}{May 2017}
+	{Barrett, the Honors College at Arizona State University; GPA 3.83}{Tempe, AZ}
+	\vspace{-1pt}\item{
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{Languages}{: C++, Java, Python, SQL} & \textbf{Operating Systems}{: Windows, Linux, MacOS} \\
+	\end{tabular*}}\vspace{-3pt}
+	\resumeSubHeadingListEnd
+
+
+	%----WORK EXPERIENCE--------------------
+	\section{Work Experience}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{Software Developer}{Jul 2017---Present}
+	{Lawrence Livermore National Laboratory}{Livermore, CA}
+	\resumeItemListStart
+	\resumeItem
+	{Maintain the Weapons and Complex Integration's Document Management System (DMS) built on Oracle's WebCenter Content (WCC) product suite and an Apache Solr search cluster, develop and integrate scripts and tools in support of DMS production services.}
+	\resumeItem
+	{Investigate improvements to a spiking neuron algorithm to solve a quadratic unconstrained binary optimization (QUBO) graph theory problem run on IBM's TrueNorth neurosynaptic hardware using Python.}
+	\resumeItem{Created an automated component that revises metadata inconsistencies, utilized regular expressions using Java and SQL, and researched and implemented a method to cleanly manage the tool's database tables through the DMS user interface.}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Software Engineer Intern}{May 2016---Aug 2016}
+	{Garmin International}{Chandler, AZ}
+	\resumeItemListStart
+	\resumeItem
+	{Developed primarily front-end software in Objective-C for the Mac application VIRB Edit supporting Garmin VIRB series action cameras, using Git in an Agile environment to collaborate.}
+	\resumeItem
+	{Added internal firmware update functionality, added option of Garmin-branded videos for export, proactively made various UI improvements, learned Objective-C on the job.}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Computer Science Undergraduate Teaching Assistant}{Jan 2016---May 2017}
+	{Ira A. Fulton Schools of Engineering at Arizona State University}{Tempe, AZ}
+	\resumeItemListStart
+	\resumeItem
+	{Held lab hours, led review sessions, and answered in-class questions for CSE 340: Principles of Programming Languages, CSE 310: Data Structures and Algorithms, and CSE 205: Object-Oriented Programming and Data Structures.}
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	
+
+	%----PROJECTS---------------------------
+	\section{Project}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Maze Generator}{Aug 2016---Apr 2017}
+	{Undergraduate Honors Thesis---\href{weiverlyplace.github.io/waverlyplace}{weiverlyplace.github.io/waverlyplace}}{Tempe, AZ}
+	\resumeItemListStart
+	\resumeItem
+	{Designed an artistic variation of Kruskal's Algorithm which generates a random maze with exactly one solution based on a user's input and implemented the playable maze generation algorithm using HTML, CSS, and JavaScript.}
+	\resumeItem
+	{Completed a 21-page thesis report and presented thesis defense.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+
+	%----LEADERSHIP AND VOLUNTEER EXPERIENCE
+	\section{Leadership and Volunteer Experience}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Girls Who Code Facilitator}{Sep 2017---Present}
+	{Christensen Middle School}{Livermore, CA}
+	\resumeItemListStart
+	\resumeItem
+	{Lead a class of around 20-30 girls and boys each week through a project-based curriculum, teaching the computer science fundamentals---variables, loops, conditionals, and functions---and fostering community.}
+	\resumeItemListEnd
+	\resumeSubheading
+	{Women in Computer Science President}{Aug 2013---May 2017}
+	{Ira A. Fulton Schools of Engineering at Arizona State University}{Tempe, AZ}
+	\resumeItemListStart
+	\resumeItem{Organized numerous networking, professional development, and social events for members, led outreach events at K-12 schools to introduce students to programming and mentor girls in coding competitions, improved organization of officers and members, and increased amount of and attendance at events.}
+	\resumeItem{Coordinated the annual Programming Competition by securing required support and materials, creating programming challenges of varying difficulty, and directing the event.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%-------------------------------------------
+\end{document}
