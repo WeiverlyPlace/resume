@@ -18,9 +18,9 @@
 %\renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-1.05in}
+\addtolength{\oddsidemargin}{-1.15in}
 %\addtolength{\evensidemargin}{-1in}
-\addtolength{\textwidth}{2in}
+\addtolength{\textwidth}{2.3in}
 \addtolength{\topmargin}{-1.2in}
 \addtolength{\textheight}{2.3in}
 %\urlstyle{same}
@@ -28,8 +28,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+\renewcommand{\normalsize}{\fontsize{10}{12}}
+
 % Sections formatting
-\titleformat{\section}{\vspace{-7pt}\scshape\raggedright\large}{}{0em}{}[\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-7pt}\scshape\raggedright\fontsize{12}{14}\bfseries}{}{0em}{}[\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
@@ -43,9 +45,9 @@
 \newcommand{\github}{\href{https://github.com/WeiverlyPlace}{github.com/WeiverlyPlace}}
 
 \newcommand{\resumeItem}[1]{
-	\item\small{
+	\item{
 		#1
-		\vspace{-0.5pt}
+%		\vspace{-1.5pt}
 	}
 }
 
@@ -54,22 +56,33 @@
 		\textbf{#1}{: #2 \vspace{-2pt}}
 	}
 }
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubHeading}[1]{
 	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}{l}
+	\scshape\textbf{#1} \\
+	\end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{
+	\vspace{-3pt}\item
 	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
+	\textbf{#1} & {#2} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemWithLink}[4]{
+	\vspace{-3pt}\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1}: \textit{\href{#2}{#3}} & {#4} \\
+	\end{tabular*}\vspace{-7pt}
+}
 
-\renewcommand{\labelitemi}{\tiny$\blacksquare$}
-\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{~$\circ$}
+\newcommand{\tabitem}{\labelitemi~}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{description}[leftmargin=*]}
 	\newcommand{\resumeSubHeadingListEnd}{\end{description}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-0.93\textwidth-\leftmargin\relax]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,rightmargin=\dimexpr\linewidth-0.92\textwidth-\leftmargin\relax]}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -82,94 +95,101 @@
 	\begin{center}\textbf{\textsc{\LARGE \name}}\end{center}
 	\vspace{-0.3in}
 	\begin{small}
-	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\phone & \linkedin \\
-		\email & \github \\
-	\end{tabular*}
+		\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+			\phone & \linkedin \\
+			\email & \github \\
+		\end{tabular*}
 	\end{small}
 	\vspace{-0.1in}
 	
-
-	%----EDUCATION--------------------------
+	%----OBJECTIVE--------------------------
 	%----PROGRAMMING SKILLS-----------------
-	\section{Education and Skills}
+	\section{Objective and Skills}
 	\resumeSubHeadingListStart
-	\resumeSubheading
-	{Bachelor of Science in Computer Science}{May 2017}
-	{Barrett, the Honors College at Arizona State University; GPA 3.83}{Tempe, AZ}
+	\resumeItem
+	{Seeking a full-time software engineering role in New York City starting Fall or Winter 2018.}
 	\vspace{-1pt}\item{
-		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-			\textbf{Languages}{: C++, Java, Python, SQL} & \textbf{Operating Systems}{: Windows, Linux, MacOS} \\
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{Languages}{: C++, Java, Python, C, SQL, Objective-C} & \textbf{Operating Systems}{: Windows, Linux, MacOS} \\
 	\end{tabular*}}\vspace{-3pt}
 	\resumeSubHeadingListEnd
-
 
 	%----WORK EXPERIENCE--------------------
 	\section{Work Experience}
 	\resumeSubHeadingListStart
 	
-	\resumeSubheading
+	\resumeSubHeading
+	{Lawrence Livermore National Laboratory}
+	\resumeSubItem
 	{Software Developer}{Jul 2017---Present}
-	{Lawrence Livermore National Laboratory}{Livermore, CA}
 	\resumeItemListStart
 	\resumeItem
-	{Maintain the Weapons and Complex Integration's Document Management System (DMS) built on Oracle's WebCenter Content (WCC) product suite and an Apache Solr search cluster, develop and integrate scripts and tools in support of DMS production services.}
+	{Develop and integrate scripts and tools in support of the Weapons and Complex Integration's Document Management System (DMS) production services.}
+	\resumeItem{Independently designed a complex database model for the Virtual Test Library in DMS; created an automated component that revises metadata inconsistencies employing regular expressions in Java, and implemented a method to cleanly manage the tool's database tables through the DMS user interface.}
 	\resumeItem
-	{Investigate improvements to a spiking neuron algorithm to solve a quadratic unconstrained binary optimization (QUBO) graph theory problem run on IBM's TrueNorth neurosynaptic hardware using Python.}
-	\resumeItem{Created an automated component that revises metadata inconsistencies, utilized regular expressions using Java and SQL, and researched and implemented a method to cleanly manage the tool's database tables through the DMS user interface.}
+	{Investigate improvements to a spiking neuron algorithm to solve a quadratic unconstrained binary optimization (QUBO) graph theory problem run on IBM's TrueNorth neurosynaptic hardware.}
+	\resumeItem{Analyzed accuracy of applying a new QUBO strategy and presented preliminary results; compared the accuracies of starting with different firing axon densities, utilizing Matplotlib in Python.}
+
 	\resumeItemListEnd
 	
-	\resumeSubheading
+	\resumeSubHeading
+	{Garmin International}
+	\resumeSubItem
 	{Software Engineer Intern}{May 2016---Aug 2016}
-	{Garmin International}{Chandler, AZ}
 	\resumeItemListStart
 	\resumeItem
-	{Developed primarily front-end software in Objective-C for the Mac application VIRB Edit supporting Garmin VIRB series action cameras, using Git in an Agile environment to collaborate.}
+	{Developed full-stack software in Objective-C for the Mac application VIRB Edit supporting Garmin VIRB series action cameras, using Git in an Agile environment to collaborate.}
 	\resumeItem
 	{Added internal firmware update functionality, added option of Garmin-branded videos for export, proactively made various UI improvements, learned Objective-C on the job.}
 	\resumeItemListEnd
 	
-	\resumeSubheading
+	\resumeSubHeading
+	{Ira A. Fulton Schools of Engineering at Arizona State University}
+	\resumeSubItem
 	{Computer Science Undergraduate Teaching Assistant}{Jan 2016---May 2017}
-	{Ira A. Fulton Schools of Engineering at Arizona State University}{Tempe, AZ}
 	\resumeItemListStart
 	\resumeItem
-	{Held lab hours, led review sessions, and answered in-class questions for CSE 340: Principles of Programming Languages, CSE 310: Data Structures and Algorithms, and CSE 205: Object-Oriented Programming and Data Structures.}
+	{Held lab hours, led review sessions, and answered in-class questions for core computer science courses.}
 	\resumeItemListEnd
 	
+	\resumeSubHeadingListEnd
+	
+	
+	%----EDUCATION--------------------------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubHeading{Barrett, the Honors College at Arizona State University}
+	\resumeSubItem{Bachelor of Science in Computer Science}{May 2017}
+	\resumeItemListStart
+	\resumeItemWithBoldTitle{Honors}{\textit{summa cum laude} (GPA: 3.83), New American University Scholar (National Merit finalist)}
+	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
 
 	%----PROJECTS---------------------------
-	\section{Project}
-	\resumeSubHeadingListStart
-	\resumeSubheading
-	{Maze Generator}{Aug 2016---Apr 2017}
-	{Undergraduate Honors Thesis---\href{weiverlyplace.github.io/waverlyplace}{weiverlyplace.github.io/waverlyplace}}{Tempe, AZ}
-	\resumeItemListStart
-	\resumeItem
-	{Designed an artistic variation of Kruskal's Algorithm which generates a random maze with exactly one solution based on a user's input and implemented the playable maze generation algorithm using HTML, CSS, and JavaScript.}
-	\resumeItem
-	{Completed a 21-page thesis report and presented thesis defense.}
-	\resumeItemListEnd
-	\resumeSubHeadingListEnd
-	
-
 	%----LEADERSHIP AND VOLUNTEER EXPERIENCE
-	\section{Leadership and Volunteer Experience}
+	\section{Projects and Activities}
 	\resumeSubHeadingListStart
-	\resumeSubheading
-	{Girls Who Code Facilitator}{Sep 2017---Present}
-	{Christensen Middle School}{Livermore, CA}
+	\resumeSubItemWithLink
+	{Maze Generator}{https://weiverlyplace.github.io/Mazes-Of-Waverly-Place}{weiverlyplace.github.io/Mazes-Of-Waverly-Place}{Aug 2016---Apr 2017}
 	\resumeItemListStart
 	\resumeItem
-	{Lead a class of around 20-30 girls and boys each week through a project-based curriculum, teaching the computer science fundamentals---variables, loops, conditionals, and functions---and fostering community.}
+	{Designed an artistic variation of Kruskal's Algorithm which generates a random customizable maze with one solution and implemented the playable game as a web page using HTML, CSS, and JavaScript.}
+	\resumeItem
+	{For undergraduate honors, completed a 21-page thesis report and successfully presented thesis defense.}
 	\resumeItemListEnd
-	\resumeSubheading
-	{Women in Computer Science President}{Aug 2013---May 2017}
-	{Ira A. Fulton Schools of Engineering at Arizona State University}{Tempe, AZ}
+	\resumeSubItem
+	{Girls Who Code, Facilitator}{Sep 2017---Present}
 	\resumeItemListStart
-	\resumeItem{Organized numerous networking, professional development, and social events for members, led outreach events at K-12 schools to introduce students to programming and mentor girls in coding competitions, improved organization of officers and members, and increased amount of and attendance at events.}
+	\resumeItem
+	{Lead a middle school club each week through a project-based curriculum, teaching the computer science fundamentals---variables, loops, conditionals, and functions---and fostering community.}
+	\resumeItemListEnd
+	\resumeSubItem
+	{Women in Computer Science at Arizona State University, President}{Aug 2013---May 2017}
+	\resumeItemListStart
+	\resumeItem{Organized numerous networking, professional development, and social events for members.}
+	\resumeItem{Led outreach events at schools to introduce computer science and mentor girls in coding competitions.}
+	\resumeItem{Improved organization of officers and members, and increased amount of and attendance at events.}
 	\resumeItem{Coordinated the annual Programming Competition by securing required support and materials, creating programming challenges of varying difficulty, and directing the event.}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
