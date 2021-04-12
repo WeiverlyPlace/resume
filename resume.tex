@@ -10,7 +10,7 @@
 \usepackage{xcolor}
 
 % margins
-\geometry{left=1.31cm, right=1.31cm, top=1.20cm, bottom=1.20cm}
+\geometry{left=0.51in, right=0.51in, top=0.67in, bottom=0.67in}
 % header and footer
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
@@ -51,12 +51,21 @@
   \end{flushleft}
 }
 
-\newcommand{\resumeSubsection}[6]{
+\newcommand{\resumeSubsection}[5]{
   \begin{center}
-  \vspace{-2.5pt}
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\large\textcolor{black}{\textbf{#1}}\normalsize\textcolor{black}{\quad\href{#4}{\textsc{#3}}\textit{#5}} & \small\textcolor{accent}{#2} \\
+	\end{tabular*}
+  \vspace{-\resumeSpacing}
+  \vspace{-\resumeSpacing}
+  \end{center}
+}
+
+\newcommand{\resumeSubsectionTwo}[5]{
+  \begin{center}
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\large\textcolor{black}{\textbf{#1}} & \small\textcolor{accent}{#2} \\
-  \href{#4}{\textsc{#3}}\textit{#6} & \textit{#5} \\
+  \textcolor{black}{\href{#4}{\textsc{#3}}\textit{#5}} & \\
 	\end{tabular*}
   \vspace{-\resumeSpacing}
   \end{center}
@@ -114,10 +123,10 @@
   %------ BEAM -------------
   \resumeSubsection
   {Lead Backend Engineer}{June 2019 --- March 2021}
-  {Beam Impact}{https://beamimpact.com/}{New York, NY}{, seed stage startup}
+  {Beam Impact}{https://beamimpact.com/}{, seed stage NYC startup}
   \begin{resumeItemize}
     \resumeItem
-    {Held primary ownership of 5 major project backends, designing and developing RESTful APIs, collaborating with frontend engineers, and anticipating design needs beyond initial requirements}
+    {Held primary ownership of 5 major project backends, designing and developing RESTful APIs, designing and modeling databases, collaborating with frontend engineers, and anticipating design needs beyond initial requirements}
     \resumeItem
     {From scratch to launch, designed and developed the multi-client backend of Beam's primary product, the SDK integration, multiplying transactions handled per day and expanding customer reach from NYC to international}
     \resumeItem
@@ -129,12 +138,14 @@
     \resumeItem
     {Enabled the marketing team to increase customer engagement by implementing automated transactional emails and custom user segmentation through SendGrid, Klaviyo, and Mailchimp marketing platform integrations}
     \resumeItem
+    {Researched machine learning algorithm approaches to build a personalized recommendation system}
+    \resumeItem
     {As early core team member, actively contributed to building the startup's initial structure and culture, including interviewing and onboarding new engineers}
   \end{resumeItemize}
   %------ LLNL -------------
   \resumeSubsection
   {Software Developer}{July 2017 --- May 2019}
-  {Lawrence Livermore National Laboratory}{https://www.llnl.gov/}{Livermore, CA}{}
+  {Lawrence Livermore National Laboratory}{https://www.llnl.gov/}{}
   \begin{resumeItemize}
     \resumeItem
     {Transformed legacy static web pages of the Virtual Test Library by designing a database for assorted experiment data and recreating web pages using Django, identifying and resolving metadata inconsistencies using regular expressions}
@@ -144,7 +155,7 @@
   %------ GARMIN -----------
 	\resumeSubsection
   {Software Engineer Intern}{May 2016 --- August 2016}
-  {Garmin International}{https://www.garmin.com/}{Chandler, AZ}{}
+  {Garmin International}{https://www.garmin.com/}{}
 	\begin{resumeItemize}
     \resumeItem
     {Developed full-stack software, including internal firmware update functionality, for the Mac application VIRB Edit supporting VIRB series action cameras, learning Objective-C on the job}
@@ -156,7 +167,7 @@
   %------ GIRLS WHO CODE ---
   \resumeSubsection
   {Facilitator}{September 2017 --- February 2019}
-  {Girls Who Code}{https://girlswhocode.com/}{Livermore, CA}{, Christensen Middle School}
+  {Girls Who Code}{https://girlswhocode.com/}{, Christensen Middle School}
   \begin{resumeItemize}
     \resumeItem
     {Led a middle school club of 30 students through a project-based curriculum each week, teaching computer science fundamentals and fostering community}
@@ -164,7 +175,7 @@
   %------ WICS -------------
   \resumeSubsection
   {President}{May 2015 --- May 2017}
-  {Women in Computer Science}{http://wics-asu.org/}{Tempe, AZ}{, Arizona State University}
+  {Women in Computer Science}{http://wics-asu.org/}{, Arizona State University}
   \begin{resumeItemize}
     \resumeItem
     {Increased active membership 2x, instituted lasting improvements to organization structure, and organized 50+ professional development, outreach, and social events, including a programming competition with 100+ participants}
@@ -174,9 +185,9 @@
   %-------------------------
   \resumeSection{Education}
   %------ BARRETT ----------
-  \resumeSubsection
+  \resumeSubsectionTwo
   {Bachelor of Science in Computer Science}{May 2017}
-  {Barrett, the Honors College at Arizona State University}{https://barretthonors.asu.edu/}{Tempe, AZ}{}
+  {Barrett, the Honors College at Arizona State University}{https://barretthonors.asu.edu/}{}
   \begin{resumeItemize}
 	  \resumeItem
     {\boldsc{Honors}\space\textit{summa cum laude} (3.83 GPA), New American University Scholar (National Merit finalist)}
